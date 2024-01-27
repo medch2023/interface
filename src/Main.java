@@ -5,6 +5,6 @@ public class Main {
         Livres l = new Livres("Condide","Ahmed",false);
 
         d.emprunter();
-        System.out.println("Le livre :"+d.getTitre());
+        d.retourner();
     }
 }

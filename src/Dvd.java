@@ -35,11 +35,21 @@ public class Dvd implements Empruntable{
 
     @Override
     public void emprunter() {
-
+        if (!emprunte) {
+            emprunte = true;
+            System.out.println("Le DVD :"+ titre + " a été emprunté.");
+        } else {
+            System.out.println("Le DVD :"+ titre + " est déjà emprunté.");
+        }
     }
 
     @Override
     public void retourner() {
-
+        if (emprunte) {
+            emprunte = false;
+            System.out.println("Le DVD :"+titre+" a été retourné.");
+        } else {
+            System.out.println("Le DVD :"+titre+" n'a pas été emprunté.");
+        }
     }
 }

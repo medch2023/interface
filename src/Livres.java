@@ -35,11 +35,21 @@ public class Livres implements Empruntable{
 
     @Override
     public void emprunter() {
-
+        if (!emprunte){
+            emprunte=true;
+            System.out.println("Le livre :"+titre+" emprunté.");
+        }else{
+            System.out.println("Le livre :"+titre+" déjà emprunté.");
+        }
     }
 
     @Override
     public void retourner() {
-
+        if (emprunte){
+            emprunte=false;
+            System.out.println("Le livre :"+titre+" retourné.");
+        }else{
+            System.out.println("Le livre :"+titre+" n'a pas été emprunté.");
+        }
     }
 }
